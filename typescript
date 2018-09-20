@@ -1,0 +1,405 @@
+Script started on Wed 19 Sep 2018 05:21:17 PM UTC
+[vagrant@ubuntu-xenial:~/workspace/git-demo]
+$ script
+Script started, file is typescript
+[vagrant@ubuntu-xenial:~/workspace/git-demo]
+$ ls
+[0m[01;34mapp[0m  [01;34mconfig[0m     [01;34mdb[0m       Gemfile.lock  [01;34mlog[0m           [01;34mpublic[0m    README.md  [01;34mtest[0m  typescript
+[01;34mbin[0m  config.ru  Gemfile  [01;34mlib[0m           package.json  Rakefile  [01;34mstorage[0m    [01;34mtmp[0m   [01;34mvendor[0m
+[vagrant@ubuntu-xenial:~/workspace/git-demo]
+$ rails generate controller Pages home
+
+Running via Spring preloader in process 29878
+[1m[34m   identical[0m  app/controllers/pages_controller.rb
+[1m[32m       route[0m  get 'pages/home'
+[1m[37m      invoke[0m  erb
+[1m[34m       exist[0m    app/views/pages
+[1m[34m   identical[0m    app/views/pages/home.html.erb
+[1m[37m      invoke[0m  test_unit
+[1m[34m   identical[0m    test/controllers/pages_controller_test.rb
+[1m[37m      invoke[0m  helper
+[1m[34m   identical[0m    app/helpers/pages_helper.rb
+[1m[37m      invoke[0m    test_unit
+[1m[37m      invoke[0m  assets
+[1m[37m      invoke[0m    coffee
+[1m[34m   identical[0m      app/assets/javascripts/pages.coffee
+[1m[37m      invoke[0m    scss
+[1m[34m   identical[0m      app/assets/stylesheets/pages.scss
+[vagrant@ubuntu-xenial:~/workspace/git-demo]
+$ 
+[vagrant@ubuntu-xenial:~/workspace/git-demo]
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mnew file:   app/assets/javascripts/pages.coffee[m
+	[32mnew file:   app/assets/stylesheets/pages.scss[m
+	[32mnew file:   app/controllers/pages_controller.rb[m
+	[32mnew file:   app/helpers/pages_helper.rb[m
+	[32mnew file:   app/views/pages/home.html.erb[m
+	[32mmodified:   config/routes.rb[m
+	[32mnew file:   test/controllers/pages_controller_test.rb[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mtypescript[m
+
+[vagrant@ubuntu-xenial:~/workspace/git-demo]
+$ git diff
+[?1h=[K[?1l>[vagrant@ubuntu-xenial:~/workspace/git-demo]
+$ git Add [K[K[K[Kadd -A
+[vagrant@ubuntu-xenial:~/workspace/git-demo]
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mnew file:   app/assets/javascripts/pages.coffee[m
+	[32mnew file:   app/assets/stylesheets/pages.scss[m
+	[32mnew file:   app/controllers/pages_controller.rb[m
+	[32mnew file:   app/helpers/pages_helper.rb[m
+	[32mnew file:   app/views/pages/home.html.erb[m
+	[32mmodified:   config/routes.rb[m
+	[32mnew file:   test/controllers/pages_controller_test.rb[m
+	[32mnew file:   typescript[m
+
+[vagrant@ubuntu-xenial:~/workspace/git-demo]
+$ di[K[Kgit diff --staged [K
+[?1h=[1mdiff --git a/app/assets/javascripts/pages.coffee b/app/assets/javascripts/pages.coffee[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..24f83d1[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/app/assets/javascripts/pages.coffee[m[m
+[36m@@ -0,0 +1,3 @@[m[m
+[32m+[m[32m# Place all the behaviors and hooks related to the matching controller here.[m[m
+[32m+[m[32m# All this logic will automatically be available in application.js.[m[m
+[32m+[m[32m# You can use CoffeeScript in this file: http://coffeescript.org/[m[m
+[1mdiff --git a/app/assets/stylesheets/pages.scss b/app/assets/stylesheets/pages.scss[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..31cb8fb[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/app/assets/stylesheets/pages.scss[m[m
+[36m@@ -0,0 +1,3 @@[m[m
+[32m+[m[32m// Place all the styles related to the Pages controller here.[m[m
+[32m+[m[32m// They will automatically be included in application.css.[m[m
+[32m+[m[32m// You can use Sass (SCSS) here: http://sass-lang.com/[m[m
+[1mdiff --git a/app/controllers/pages_controller.rb b/app/controllers/pages_controller.rb[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..45f463e[m[ +1,4 @@[m[m
+[32m+[m[32mclass PagesController < ApplicationController[m[m
+[32m+[m[32m  def home[m[m
+[32m+[m[32m  end[m[m
+[32m+[m[32mend[m[m
+[1mdiff --git a/app/helpers/pages_helper.rb b/app/helpers/pages_helper.rb[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..2c057fd[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/app/helpers/pages_helper.rb[m[m
+[36m@@ -0,0 +1,2 @@[m[m
+[32m+[m[32mmodule PagesHelper[m[m
+[32m+[m[32mend[m[m
+[1mdiff --git a/app/views/pages/home.html.erb b/app/views/pages/home.html.erb[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..3453cf2[m[m
+[1m--- /dev/null[m[m
+:[K[K [KESCESC[KOO[KBB[K[1m+++ b/app/views/pages/home.html.erb[m[m
+:[K[K [KESCESC[KOO[KBB[K[36m@@ -0,0 +1,2 @@[m[m
+:[K[K [KESCESC[KOO[KBB[K[32m+[m[32m<h1>Pages#home</h1>[m[m
+:[K[K [KESCESC[KOO[KBB[K[32m+[m[32m<p>Find me in app/views/pages/home.html.erb</p>[m[m
+:[K[K [KESCESC[KOO[KBB[K[1mdiff --git a/config/routes.rb b/config/routes.rb[m[m
+:[K[K [KESCESC[KOO[KBB[K[1mindex 787824f..5cc3e31 100644[m[m
+:[K[K [KESCESC[KOO[KBB[K[1m--- a/config/routes.rb[m[m
+:[K[K [KESCESC[KOO[KBB[K[1m+++ b/config/routes.rb[m[m
+:[K[K [KESCESC[KOO[KBB[K[36m@@ -1,3 +1,4 @@[m[m
+:[K[K [KESCESC[KOO[KBB[K Rails.application.routes.draw do[m[m
+:[K[K [KESCESC[KOO[KBB[K[32m+[m[32m  get 'pages/home'[m[m
+:[K[K [KESCESC[KOO[KBB[K   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html[m[m
+:[K[K [KESCESC[KOO[KBB[K end[m[m
+:[K[K [KESCESC[KOO[KBB[K[1mdiff --git a/test/controllers/pages_controller_test.rb b/test/controllers/pages_controller_test.rb[m[m
+:[K[K [KESCESC[KOO[KBB[K[1mnew file mode 100644[m[m
+:[K[K [KESCESC[KOO[KBB[K[1mindex 0000000..56c712a[m[m
+:[K[K [KESCESC[KOO[KBB[K[1m--- /dev/null[m[m
+:[K[K [KESCESC[KOO[KBB[K[1m+++ b/test/controllers/pages_controller_test.rb[m[m
+:[K[K [KESCESC[KOO[KBB[K[36m@@ -0,0 +1,9 @@[m[m
+:[K[K [KESCESC[KOO[KBB[K[32m+[m[32mrequire 'test_helper'[m[m
+:[K[K [KESCESC[KOO[KBB[K[32m+[m[m
+:[K[K [KESCESC[KOO[KBB[K[32m+[m[32mclass PagesControllerTest < ActionDispatch::IntegrationTest[m[m
+:[K[K [KESCESC[KOO[KBB[K[32m+[m[32m  test "should get home" do[m[m
+:[K[K [KESCESC[KOO[KBB[K[32m+[m[32m    get pages_home_url[m[m
+:[K[K [KESCESC[KOO[KBB[K[32m+[m[32m    assert_response :success[m[m
+:[K[K [KESCESC[KOO[KBB[K[32m+[m[32m  end[m[m
+:[K[K [KESCESC[KOO[KBB[K[32m+[m[m
+:[K[K [KESCESC[KOO[KBB[K[32m+[m[32mend[m[m
+:[K[K [KESCESC[KOO[KBB[K[1mdiff --git a/typescript b/typescript[m[m
+:[K[K [KESCESC[KOO[KBB[K[1mnew file mode 100644[m[m
+:[K[K [KESCESC[KOO[KBB[K[1mindex 0000000..e69de29[m[m
+:[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KCC[H[2J[H[1m[m[m
+[1m[m[m
+[36m[m[m
+[32m[m[32m[m[m
+[32m[m[32m[m[m
+[1ms/pages/home.html.erb[m[m
+[1m[m[m
+[1m[m[m
+[1m[m[m
+[1m[m[m
+[36m[m[m
+[32m[m[32m[m[m
+[32m[m[32m[m[m
+[1m[m[m
+[1m[m[m
+[1m[m[m
+[1m[m[m
+[36m[m[m
+[m[m
+[32m[m[32m[m[m
+e, see http://guides.rubyonrails.org/routing.html[m[m
+[m[m
+[1mb b/test/controllers/pages_controller_test.rb[m[m
+[1m[m[m
+[1m[m[m
+[1m[m[m
+[1m[m[m
+[36m[m[m
+[32m[m[32m[m[m
+[32m[m[m
+[32m[m[32mionTest[m[m
+[32m[m[32m[m[m
+[32m[m[32m[m[m[32m[m[m
+[32m[m[m
+[32m[m[32mionTest[m[m
+[32m[m[32m[m[m
+[32m[m[32m[m[m
+[32m[m[32m[m[m
+[32m[m[32m[m[m
+[32m[m[m
+[32m[m[32m[m[m
+[1m[m[m
+[1m[m[m
+[1m[m[m
+[7m(END)[27m[K[K [KESCESC[KOO[KDD[H[2J[H[1m--- /dev/null[m[m
+[1m+++ b/app/helpers/pages_helper.rb[m[m
+[36m@@ -0,0 +1,2 @@[m[m
+[32m+[m[32mmodule PagesHelper[m[m
+[32m+[m[32mend[m[m
+[1mdiff --git a/app/views/pages/home.html.erb b/app/views/pages/home.html.erb[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..3453cf2[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/app/views/pages/home.html.erb[m[m
+[36m@@ -0,0 +1,2 @@[m[m
+[32m+[m[32m<h1>Pages#home</h1>[m[m
+[32m+[m[32m<p>Find me in app/views/pages/home.html.erb</p>[m[m
+[1mdiff --git a/config/routes.rb b/config/routes.rb[m[m
+[1mindex 787824f..5cc3e31 100644[m[m
+[1m--- a/config/routes.rb[m[m
+[1m+++ b/config/routes.rb[m[m
+[36m@@ -1,3 +1,4 @@[m[m
+ Rails.application.routes.draw do[m[m
+[32m+[m[32m  get 'pages/home'[m[m
+   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html[m[m
+ end[m[m
+[1mdiff --git a/test/controllers/pages_controller_test.rb b/test/controllers/pages_controller_test.rb[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..56c712a[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/test/controllers/pages_controller_test.rb[m[m
+[36m@@ -0,0 +1,9 @@[m[m
+[32m+[m[32mrequire 'test_helper'[m[m
+[32m+[m[m
+[32m+[m[32mclass PagesControllerTest < ActionDispatch::IntegrationTest[m[m
+[32m+[m[32m  test "should get home" do[m[m
+[32m+[m[32m    get pages_home_url[m[m
+[32m+[m[32m    assert_response :success[m[m
+[32m+[m[32m  end[m[m
+[32m+[m[m
+[32m+[m[32mend[m[m
+[1mdiff --git a/typescript b/typescript[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..e69de29[m[m
+[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K...skipping...
+[m
+                   [1mSUMMARY[0m [1mOF[0m [1mLESS[0m [1mCOMMANDS[0m[m
+[m
+      Commands marked with * may be preceded by a number, [4mN[24m.[m
+      Notes in parentheses indicate the behavior if [4mN[24m is given.[m
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.[m
+[m
+  h  H                 Display this help.[m
+  q  :q  Q  :Q  ZZ     Exit.[m
+ ---------------------------------------------------------------------------[m
+[m
+                           [1mMOVING[0m[m
+[m
+  e  ^E  j  ^N  CR  *  Forward  one line   (or [4mN[24m lines).[m
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or [4mN[24m lines).[m
+  f  ^F  ^V  SPACE  *  Forward  one window (or [4mN[24m lines).[m
+  b  ^B  ESC-v      *  Backward one window (or [4mN[24m lines).[m
+  z                 *  Forward  one window (and set window to [4mN[24m).[m
+  w                 *  Backward one window (and set window to [4mN[24m).[m
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.[m
+  d  ^D             *  Forward  one half-window (and set half-window to [4mN[24m).[m
+  u  ^U             *  Backward one half-window (and set half-window to [4mN[24m).[m
+  ESC-)  RightArrow *  Left  one half screen width (or [4mN[24m positions).[m
+  ESC-(  LeftArrow  *  Right one half screen width (or [4mN[24m positions).[m
+  F                    Forward forever; like "tail -f".[m
+  ESC-F                Like F but stop when search pattern is found.[m
+  r  ^R  ^L            Repaint screen.[m
+  R                    Repaint screen, discarding buffered input.[m
+        ---------------------------------------------------[m
+        Default "window" is the screen height.[m
+        Default "half-window" is half of the screen height.[m
+ ---------------------------------------------------------------------------[m
+[h forward for ([4mN[24m-th) matching line.[m
+  ?[4mpattern[24m          *  Search backward for ([4mN[24m-th) matching line.[m
+  n                 *  Repeat previous search (for [4mN[24m-th occurrence).[m
+  N                 *  Repeat previous search in reverse direction.[m
+  ESC-n             *  Repeat previous search, spanning files.[m
+[7mHELP -- Press RETURN for more, or q when done[27m[K[K  ESC-N             *  Repeat previous search, reverse dir. & spanning files.[m
+[7mHELP -- Press RETURN for more, or q when done[27m[K...skipping...
+[1m--- /dev/null[m[m
+[1m+++ b/app/helpers/pages_helper.rb[m[m
+[36m@@ -0,0 +1,2 @@[m[m
+[32m+[m[32mmodule PagesHelper[m[m
+[32m+[m[32mend[m[m
+[1mdiff --git a/app/views/pages/home.html.erb b/app/views/pages/home.html.erb[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..3453cf2[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/app/views/pages/home.html.erb[m[m
+[36m@@ -0,0 +1,2 @@[m[m
+[32m+[m[32m<h1>Pages#home</h1>[m[m
+[32m+[m[32m<p>Find me in app/views/pages/home.html.erb</p>[m[m
+[1mdiff --git a/config/routes.rb b/config/routes.rb[m[m
+[1mindex 787824f..5cc3e31 100644[m[m
+[1m--- a/config/routes.rb[m[m
+[1m+++ b/config/routes.rb[m[m
+[36m@@ -1,3 +1,4 @@[m[m
+ Rails.application.routes.draw do[m[m
+[32m+[m[32m  get 'pages/home'[m[m
+   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html[m[m
+ end[m[m
+[1mdiff --git a/test/controllers/pages_controller_test.rb b/test/controllers/pages_controller_test.rb[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..56c712a[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/test/controllers/pages_controller_test.rb[m[m
+[36m@@ -0,0 +1,9 @@[m[m
+[32m+[m[32mrequire 'test_helper'[m[m
+[32m+[m[m
+[32m+[m[32mclass PagesControllerTest < ActionDispatch::IntegrationTest[m[m
+[32m+[m[32m  test "should get home" do[m[m
+[32m+[m[32m    get pages_home_url[m[m
+[32m+[m[32m    assert_response :success[m[m
+[32m+[m[32m  end[m[m
+[32m+[m[m
+[32m+[m[32mend[m[m
+[1mdiff --git a/typescript b/typescript[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..e69de29[m[m
+:[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K...skipping...
+[m
+                   [1mSUMMARY[0m [1mOF[0m [1mLESS[0m [1mCOMMANDS[0m[m
+[m
+      Commands marked with * may be preceded by a number, [4mN[24m.[m
+      Notes in parentheses indicate the behavior if [4mN[24m is given.[m
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.[m
+[m
+  h  H                 Display this help.[m
+  q  :q  Q  :Q  ZZ     Exit.[m
+ ---------------------------------------------------------------------------[m
+[m
+                           [1mMOVING[0m[m
+[m
+  e  ^E  j  ^N  CR  *  Forward  one line   (or [4mN[24m lines).[m
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or [4mN[24m lines).[m
+  f  ^F  ^V  SPACE  *  Forward  one window (or [4mN[24m lines).[m
+  b  ^B  ESC-v      *  Backward one window (or [4mN[24m lines).[m
+  z                 *  Forward  one window (and set window to [4mN[24m).[m
+  w                 *  Backward one window (and set window to [4mN[24m).[m
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.[m
+  d  ^D             *  Forward  one half-window (and set half-window to [4mN[24m).[m
+  u  ^U             *  Backward one half-window (and set half-window to [4mN[24m).[m
+  ESC-)  RightArrow *  Left  one half screen width (or [4mN[24m positions).[m
+  ESC-(  LeftArrow  *  Right one half screen width (or [4mN[24m positions).[m
+  F      
+  ESC-(  LeftArrow  *  Right one half screen width (or [4mN[24m positions).[m
+  F                    Forward forever; like "tail -f".[m
+  ESC-F                Like F but stop when search pattern is found.[m
+  r  ^R  ^L            Repaint screen.[m
+  R                    Repaint screen, discarding buffered input.[m
+        ---------------------------------------------------[m
+        Default "window" is the screen height.[m
+        Default "half-window" is half of the screen height.[m
+ ---------------------------------------------------------------------------[m
+[m
+                          [1mSEARCHING[0m[m
+[m
+  /[4mpattern[24m          *  Search forward for ([4mN[24m-th) matching line.[m
+  ?[4mpattern[24m          *  Search backward for ([4mN[24m-th) matching line.[m
+  n                 *  Repeat previous search (for [4mN[24m-th occurrence).[m
+  N                 *  Repeat previous search in reverse direction.[m
+  ESC-n             *  Repeat previous search, spanning files.[m
+[7mHELP -- Press RETURN for more, or q when done[27m[K...skipping...
+[1m--- /dev/null[m[m
+[1m+++ b/app/helpers/pages_helper.rb[m[m
+[36m@@ -0,0 +1,2 @@[m[m
+[32m+[m[32mmodule PagesHelper[m[m
+[32m+[m[32mend[m[m
+[1mdiff --git a/app/views/pages/home.html.erb b/app/views/pages/home.html.erb[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..3453cf2[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/app/views/pages/home.html.erb[m[m
+[36m@@ -0,0 +1,2 @@[m[m
+[32m+[m[32m<h1>Pages#home</h1>[m[m
+[32m+[m[32m<p>Find me in app/views/pages/home.html.erb</p>[m[m
+[1mdiff --git a/config/routes.rb b/config/routes.rb[m[m
+[1mindex 787824f..5cc3e31 100644[m[m
+[1m--- a/config/routes.rb[m[m
+[1m+++ b/config/routes.rb[m[m
+[36m@@ -1,3 +1,4 @@[m[m
+ Rails.application.routes.draw do[m[m
+[32m+[m[32m  get 'pages/home'[m[m
+   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html[m[m
+ end[m[m
+[1mdiff --git a/test/controllers/pages_controller_test.rb b/test/controllers/pages_controller_test.rb[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..56c712a[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/test/controllers/pages_controller_test.rb[m[m
+[36m@@ -0,0 +1,9 @@[m[m
+[32m+[m[32mrequire 'test_helper'[m[m
+[32m+[m[m
+[32m+[m[32mclass PagesControllerTest < ActionDispatch::IntegrationTest[m[m
+[32m+[m[32m  test "should get home" do[m[m
+[32m+[m[32m    get pages_home_url[m[m
+[32m+[m[32m    assert_response :success[m[m
+[32m+[m[32m  end[m[m
+[32m+[m[m
+[32m+[m[32mend[m[m
+[1mdiff --git a/typescript b/typescript[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..e69de29[m[m
+:[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K[HM[1mindex 0000000..2c057fd[m[m
+[HM[1mnew file mode 100644[m[m
+[HM[1mdiff --git a/app/helpers/pages_helper.rb b/app/helpers/pages_helper.rb[m[m
+[HM[32m+[m[32mend[m[m
+[HM[32m+[m[32m  end[m[m
+[HM[32m+[m[32m  def home[m[m
+[HM[32m+[m[32mclass PagesController < ApplicationController[m[m
+[HM[36m@@ -0,0 +1,4 @@[m[m
+[HM[1m+++ b/app/controllers/pages_controller.rb[m[m
+[HM[1m--- /dev/null[m[m
+[HM[1mindex 0000000..45f463e[m[m
+[HM[1mnew file mode 100644[m[m
+[HM[1mdiff --git a/app/controllers/pages_controller.rb b/app/controllers/pages_controller.rb[m[m
+[HM[32m+[m[32m// You can use Sass (SCSS) here: http://sass-lang.com/[m[m
+[HM[32m+[m[32m// They will automatically be included in application.css.[m[m
+[HM[32m+[m[32m// Place all the styles related to the Pages controller here.[m[m
+[HM[36m@@ -0,0 +1,3 @@[m[m
+[HM[1m+++ b/app/assets/stylesheets/pages.scss[m[m
+[HM[1m--- /dev/null[m[m
+[HM[1mindex 00
