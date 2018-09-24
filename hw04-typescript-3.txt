@@ -128,4 +128,32 @@ bash-3.2$ git log --graph --oneline --all --decorate
 * [33mcf57876[m Updated homepage view[m
 * [33m031b4bc[m Added home page[m
 * [33m9515c39[m Started Git Demo project[m
-[K[?1l>bash-3.2$ git ad
+[K[?1l>bash-3.2$ git ad[Kdd _[K-A
+bash-3.2$ git update [K[K[K[K[K[K[Kcommit -m "second update"
+[master 21b18b5] second update
+ 2 files changed, 60 insertions(+), 2 deletions(-)
+bash-3.2$ git push
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  25% (1/4)   Writing objects:  50% (2/4)   Writing objects:  75% (3/4)   Writing objects: 100% (4/4)   Writing objects: 100% (4/4), 878 bytes | 878.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/TotiCuervo/git-demo-2.git
+   edb080e..21b18b5  master -> master
+bash-3.2$ git pull
+Already up to date.
+bash-3.2$ git pull
+Already up to date.
+bash-3.2$ ls
+Gemfile			hw04-typescript-3.txt
+Gemfile.lock		lib
+Git-Demo-Logan		log
+README.md		package.json
+Rakefile		public
+app			storage
+bin			test
+config			tmp
+config.ru		typescript
+db			vendor
+bash-3.2$ 
