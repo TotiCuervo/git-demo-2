@@ -1,0 +1,73 @@
+Script started on Mon Sep 24 15:12:24 2018
+[?1034hbash-3.2$ git pu[Kull https://github.com/TotiCuervo/git-de mo-2.git[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls
+Gemfile			hw04-typescript-3.txt
+Gemfile.lock		lib
+Git-Demo-Logan		log
+README.md		package.json
+Rakefile		public
+app			storage
+bin			test
+config			tmp
+config.ru		typescript
+db			vendor
+bash-3.2$ git simple
+git: 'simple' is not a git command. See 'git --help'.
+bash-3.2$ git config --global push.default simple
+bash-3.2$ git remote https://github.com/TotiCuervo/git- demo-2.git
+error: Unknown subcommand: https://github.com/TotiCuervo/git-demo-2.git
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+bash-3.2$ git remote add origin https://github.com/Toti Cuervo/git-demo-2.git
+bash-3.2$ git push -u origin master
+Counting objects: 184, done.
+Delta compression using up to 4 threads.
+Compressing objects:   0% (1/158)   Compressing objects:   1% (2/158)   Compressing objects:   2% (4/158)   Compressing objects:   3% (5/158)   Compressing objects:   4% (7/158)   Compressing objects:   5% (8/158)   Compressing objects:   6% (10/158)   Compressing objects:   7% (12/158)   Compressing objects:   8% (13/158)   Compressing objects:   9% (15/158)   Compressing objects:  10% (16/158)   Compressing objects:  11% (18/158)   Compressing objects:  12% (19/158)   Compressing objects:  13% (21/158)   Compressing objects:  14% (23/158)   Compressing objects:  15% (24/158)   Compressing objects:  16% (26/158)   Compressing objects:  17% (27/158)   Compressing objects:  18% (29/158)   Compressing objects:  19% (31/158)   Compressing objects:  20% (32/158)   Compressing objects:  21% (34/158)   Compressing objects:  22% (35/158)   Compressing objects:  23% (37/158)   Compressing objects:  24% (38/158)   Compressing objects:  25% (40/158)   Compressing objects:  26% (42/158)   Compressing objects:  27% (43/158)   Compressing objects:  28% (45/158)   Compressing objects:  29% (46/158)   Compressing objects:  30% (48/158)   Compressing objects:  31% (49/158)   Compressing objects:  32% (51/158)   Compressing objects:  33% (53/158)   Compressing objects:  34% (54/158)   Compressing objects:  35% (56/158)   Compressing objects:  36% (57/158)   Compressing objects:  37% (59/158)   Compressing objects:  38% (61/158)   Compressing objects:  39% (62/158)   Compressing objects:  40% (64/158)   Compressing objects:  41% (65/158)   Compressing objects:  42% (67/158)   Compressing objects:  43% (68/158)   Compressing objects:  44% (70/158)   Compressing objects:  45% (72/158)   Compressing objects:  46% (73/158)   Compressing objects:  47% (75/158)   Compressing objects:  48% (76/158)   Compressing objects:  49% (78/158)   Compressing objects:  50% (79/158)   Compressing objects:  51% (81/158)   Compressing objects:  52% (83/158)   Compressing objects:  53% (84/158)   Compressing objects:  54% (86/158)   Compressing objects:  55% (87/158)   Compressing objects:  56% (89/158)   Compressing objects:  57% (91/158)   Compressing objects:  58% (92/158)   Compressing objects:  59% (94/158)   Compressing objects:  60% (95/158)   Compressing objects:  61% (97/158)   Compressing objects:  62% (98/158)   Compressing objects:  63% (100/158)   Compressing objects:  64% (102/158)   Compressing objects:  65% (103/158)   Compressing objects:  66% (105/158)   Compressing objects:  67% (106/158)   Compressing objects:  68% (108/158)   Compressing objects:  69% (110/158)   Compressing objects:  70% (111/158)   Compressing objects:  71% (113/158)   Compressing objects:  72% (114/158)   Compressing objects:  73% (116/158)   Compressing objects:  74% (117/158)   Compressing objects:  75% (119/158)   Compressing objects:  76% (121/158)   Compressing objects:  77% (122/158)   Compressing objects:  78% (124/158)   Compressing objects:  79% (125/158)   Compressing objects:  80% (127/158)   Compressing objects:  81% (128/158)   Compressing objects:  82% (130/158)   Compressing objects:  83% (132/158)   Compressing objects:  84% (133/158)   Compressing objects:  85% (135/158)   Compressing objects:  86% (136/158)   Compressing objects:  87% (138/158)   Compressing objects:  88% (140/158)   Compressing objects:  89% (141/158)   Compressing objects:  90% (143/158)   Compressing objects:  91% (144/158)   Compressing objects:  92% (146/158)   Compressing objects:  93% (147/158)   Compressing objects:  94% (149/158)   Compressing objects:  95% (151/158)   Compressing objects:  96% (152/158)   Compressing objects:  97% (154/158)   Compressing objects:  98% (155/158)   Compressing objects:  99% (157/158)   Compressing objects: 100% (158/158)   Compressing objects: 100% (158/158), done.
+Writing objects:   0% (1/184)   Writing objects:   1% (2/184)   Writing objects:   2% (4/184)   Writing objects:   3% (6/184)   Writing objects:   4% (9/184)   Writing objects:   5% (10/184)   Writing objects:   6% (12/184)   Writing objects:   7% (13/184)   Writing objects:   8% (15/184)   Writing objects:   9% (17/184)   Writing objects:  10% (19/184)   Writing objects:  11% (21/184)   Writing objects:  12% (23/184)   Writing objects:  13% (24/184)   Writing objects:  14% (26/184)   Writing objects:  15% (28/184)   Writing objects:  16% (30/184)   Writing objects:  17% (32/184)   Writing objects:  18% (34/184)   Writing objects:  19% (35/184)   Writing objects:  20% (37/184)   Writing objects:  21% (39/184)   Writing objects:  22% (41/184)   Writing objects:  23% (43/184)   Writing objects:  24% (45/184)   Writing objects:  25% (46/184)   Writing objects:  26% (48/184)   Writing objects:  27% (50/184)   Writing objects:  28% (52/184)   Writing objects:  29% (54/184)   Writing objects:  30% (56/184)   Writing objects:  31% (58/184)   Writing objects:  32% (59/184)   Writing objects:  33% (61/184)   Writing objects:  34% (63/184)   Writing objects:  35% (65/184)   Writing objects:  36% (67/184)   Writing objects:  37% (69/184)   Writing objects:  38% (70/184)   Writing objects:  39% (72/184)   Writing objects:  40% (74/184)   Writing objects:  41% (76/184)   Writing objects:  42% (78/184)   Writing objects:  43% (80/184)   Writing objects:  44% (81/184)   Writing objects:  45% (83/184)   Writing objects:  46% (85/184)   Writing objects:  47% (87/184)   Writing objects:  48% (89/184)   Writing objects:  49% (91/184)   Writing objects:  50% (92/184)   Writing objects:  51% (94/184)   Writing objects:  52% (96/184)   Writing objects:  53% (98/184)   Writing objects:  54% (100/184)   Writing objects:  55% (102/184)   Writing objects:  56% (104/184)   Writing objects:  57% (105/184)   Writing objects:  58% (107/184)   Writing objects:  59% (109/184)   Writing objects:  60% (111/184)   Writing objects:  61% (113/184)   Writing objects:  62% (115/184)   Writing objects:  63% (116/184)   Writing objects:  64% (118/184)   Writing objects:  65% (120/184)   Writing objects:  66% (122/184)   Writing objects:  67% (124/184)   Writing objects:  68% (126/184)   Writing objects:  69% (127/184)   Writing objects:  70% (129/184)   Writing objects:  71% (131/184)   Writing objects:  72% (133/184)   Writing objects:  73% (135/184)   Writing objects:  74% (137/184)   Writing objects:  75% (138/184)   Writing objects:  76% (140/184)   Writing objects:  77% (142/184)   Writing objects:  78% (144/184)   Writing objects:  79% (146/184)   Writing objects:  80% (148/184)   Writing objects:  81% (150/184)   Writing objects:  82% (151/184)   Writing objects:  83% (153/184)   Writing objects:  84% (155/184)   Writing objects:  85% (157/184)   Writing objects:  86% (159/184)   Writing objects:  87% (161/184)   Writing objects:  88% (162/184)   Writing objects:  89% (164/184)   Writing objects:  90% (166/184)   Writing objects:  91% (168/184)   Writing objects:  92% (170/184)   Writing objects:  93% (172/184)   Writing objects:  94% (173/184)   Writing objects:  95% (175/184)   Writing objects:  96% (177/184)   Writing objects:  97% (179/184)   Writing objects:  98% (181/184)   Writing objects:  99% (183/184)   Writing objects: 100% (184/184)   Writing objects: 100% (184/184), 31.95 KiB | 2.46 MiB/s, done.
+Total 184 (delta 41), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/41)   [Kremote: Resolving deltas:   2% (1/41)   [Kremote: Resolving deltas:  39% (16/41)   [Kremote: Resolving deltas:  63% (26/41)   [Kremote: Resolving deltas:  65% (27/41)   [Kremote: Resolving deltas:  70% (29/41)   [Kremote: Resolving deltas:  73% (30/41)   [Kremote: Resolving deltas:  80% (33/41)   [Kremote: Resolving deltas:  85% (35/41)   [Kremote: Resolving deltas:  90% (37/41)   [Kremote: Resolving deltas:  95% (39/41)   [Kremote: Resolving deltas:  97% (40/41)   [Kremote: Resolving deltas: 100% (41/41)   [Kremote: Resolving deltas: 100% (41/41), done.[K
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:[K
+remote:      https://github.com/TotiCuervo/git-demo-2/pull/new/master[K
+remote: 
+To https://github.com/TotiCuervo/git-demo-2.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+bash-3.2$ git remote
+origin
+bash-3.2$ git log --graph --oneline --all --decorate
+[?1h=*   [33m47dc4ac[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m fixed merge[m [33m[m[33m[m[1;36m[m[1;32m[m[33m[m[1;31m[m[33m[ms[m
+[31m|[m[32m\[m  [m
+[31m|[m * [33m841034c[m added contributors[m
+* [32m|[m [33mbc773af[m updating name[m
+[32m|[m[32m/[m  [m
+* [33med6aa92[m UPdated readme[m
+* [33md3ce889[m Updated about page[m
+*   [33mc6e1138[m Merged about page branch into master[m
+[33m|[m[34m\[m  [m
+[33m|[m * [33me861fc6[m Updated home page[m
+[33m|[m * [33m07e1c39[m Updated about page[m
+* [34m|[m [33m8f045b5[m Added link on about page back to the home p[m [34m[m[33m[mage.[m
+* [34m|[m [33m213d44f[m Added link on home_page to about_page[m
+[34m|[m[34m/[m  [m
+* [33mc8698c9[m Added about view[m
+* [33m3585cce[m Added Authors file[m
+* [33m4f48af1[m Updated home page to fully expanded applicati[m [33m[mon[m
+* [33mcf57876[m Updated homepage view[m
+* [33m031b4bc[m Added home page[m
+* [33m9515c39[m Started Git Demo project[m
+[K[?1l>bash-3.2$ 
